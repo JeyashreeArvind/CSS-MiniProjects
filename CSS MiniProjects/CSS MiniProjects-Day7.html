@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS MiniProjects - Day7</title>
+    <style>
+    .navbar {
+    background:linear-gradient(to right,lightgreen,rgb(242, 83, 62));
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar-links{
+    list-style-type: none; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    overflow:hidden;
+    letter-spacing: 2px;
+}
+.navbar a {
+    float: left; 
+    display: block; 
+    color: #f2f2f2; 
+    text-align: center; 
+    padding: 15px 20px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar-links li a:hover {
+    background-color: #555; 
+    color: #4CAF50;
+    border-radius: 4px; 
+}
+.login-container{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 500px; 
+  width:500px;
+  background:linear-gradient(to right,rgb(92, 160, 192), rgb(110, 210, 228)); 
+  padding: 20px 50px 20px 50px; 
+}
+.login-form {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px; 
+  gap: 15px; 
+}
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width:300px;
+}
+.image-container {
+    display: flex; 
+    gap: 40px;
+    height: 80vh;
+    width: 100%;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-item img {
+    width: 100%;  
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.gallery-item:hover img{
+  filter: brightness(1.5);
+}
+.card-container{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(to right, rgb(252, 110, 88),rgb(249, 132, 96));
+    width:500px;
+    height:300px;
+    padding: 40px;
+    margin-left:400px;
+
+}
+.card{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap:wrap;
+    background-color: white;
+    width:350px;
+    font-size: larger;
+    padding:40px;
+    text-align: center;
+}
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  gap: 50px; 
+  padding: 20px;
+  flex-wrap: wrap; 
+}
+.plan {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  flex: 1 1 300px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.navbar1 {
+    background:linear-gradient(to right,lightgreen,rgb(227, 52, 180));
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    
+    width: 100%;
+    box-sizing: border-box;
+    gap:60px;
+}
+.navbar1 img{
+    margin-left: 30px;
+}
+.navbar1-links{
+    list-style-type: none; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex; 
+    flex-direction: row;
+    letter-spacing: 2px;
+    justify-content:space-between;
+    gap:60px;
+    color: white;
+    padding: 70px;;
+    width:80%;
+}
+.navbar1-links li a:hover {
+    background-color: #555; 
+    color: #4CAF50;
+    border-radius: 4px; 
+}
+.form-container {
+    
+    display: flex; 
+  justify-content: space-around; 
+  align-items: flex-start; 
+  width: 80%; 
+  margin: 50px auto; 
+  border: 1px solid #ccc;
+  padding: 20px;
+  gap:30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom right, #e536b4, #9198e5);
+
+}
+
+.form-section {
+    padding: 40px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.login-section {
+      background: linear-gradient(to right, #ff9966, #ffcc66,lightpink);
+}
+
+.signup-section {
+    background-image: linear-gradient(to bottom, aqua,yellow,aquamarine) ;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    outline: none; 
+    border-color: #4D90FE; 
+    box-shadow: 0 0 8px rgba(77, 144, 254, 0.6);
+    background-color: #f9f9f9;
+}
+.mybutton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #19a92c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.mybutton:hover {
+    background-color: #2997f1;
+}
+.contact-container {
+  display: flex;
+  gap: 40px;
+  width: 80%;
+  height:800px;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.6), 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+iframe {
+            width: 100%;
+            height: 500px; 
+            border: 2px solid black; 
+        }
+        .contact-form{
+            display:flex;
+            flex-direction: column;
+            width:30%;
+            height:500px;
+            border: 2px solid black;
+            padding: 10px;
+            gap:20px;
+            background-color: lightpink;
+        }
+        
+    </style>
+</head>
+<body>
+<h1>Mini Project 1- Building a Navigation Bar</h1>  
+<nav class="navbar">
+<ul class="navbar-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<br><hr><br>
+<h1>Flexbox Login Form</h1>
+<div class="login-container">
+  <form class="login-form">
+    <h2>Login</h2>
+    <div>
+      <label for="username"></label>
+      <input type="text" id="username" name="username" required placeholder="username">
+    </div>
+    <div>
+      <label for="password"></label>
+      <input type="password" id="password" name="password" required placeholder="password">
+    </div>
+    <button type="submit" style="width:320px;background-color: rgb(71, 166, 239); border-radius: 5px;height:50px;">Login</button>
+  </form>
+</div>
+<br><hr><br>
+<h1></h1>
+<h1>Mini Project 3: Image Gallery </h1>
+ <div class="image-container">
+        <div class="gallery-item">
+         <figure><figcaption style="font-size: 0.875rem;text-align:center;font-weight: bold;">Rose</figcaption><img src="rose.jpg" alt="Flower: Rose"></figure> 
+        </div>
+        <div class="gallery-item">
+          <figure><figcaption style="font-size: 0.875rem;text-align: center;font-weight: bold;">Blue Flower</figcaption> <img src="blue.jpg" alt="Flower: Blue"></figure>
+        </div>
+        <div class="gallery-item">
+           <figure><figcaption style="font-size: 0.875rem;text-align: center;font-weight: bold;">White Flower</figcaption> <img src="white.jpg" alt="Flower: White"></figure>
+        </div>
+        <div class="gallery-item">
+            <figure><figcaption style="font-size: 0.875rem;text-align: center;font-weight: bold;">RedRose</figcaption> <img src="redrose.jpg" alt="Flower: RedRose"></figure>
+        </div>
+        <div class="gallery-item">
+            <figure><figcaption style="font-size: 0.875rem;text-align: center;font-weight: bold;">Colourful Flower</figcaption><img src="colourful.jpg" alt="Flower: Colourful"></figure>
+        </div>
+        <div class="gallery-item">
+            <figure><figcaption style="font-size: 0.875rem;text-align: center;font-weight: bold;">Sunflower</figcaption><img src="sunflower.jpg" alt="Flower:Sunflower"></figure>
+        </div>
+        </div><br><br><hr>
+<h1>Mini Project 4- Centered card</h1>
+<div class="card-container">
+<div class="card">
+<h2>Welcome to Vetri Tech</h2>
+<p>Your success starts here. Join us and build your future.</p>
+<button type="submit" style="background-color: rgb(237, 100, 20);width:150px;height:50px;border-radius: 5px;color:white;font-size: large;">Get Started</button>
+</div>
+</div>
+<br><hr><br>
+<h1>Mini Project: 5 - Flexbox Pricing Table</h1>
+<div class="pricing-table">
+  <div class="plan">
+    <h3>Basic Plan</h3>
+    <div>$19<span>/mo</span></div>
+    <ul>
+      <li>&#10003; 5 Users</li>
+      <li>&#10003; Basic Features</li>
+      <li>&#10005; 24/7 Support</li>
+      <li>&#10005; Customization</li>
+    </ul>
+  </div>
+  <div class="plan">
+    <h3>Pro Plan</h3>
+    <div>$49<span>/mo</span></div>
+    <ul>
+      <li>&#10003; 20 Users</li>
+      <li>&#10003; All Features</li>
+      <li>&#10003; 24/7 Support</li>
+      <li>&#10005; Customization</li>
+    </ul>
+  </div>
+  <div class="plan" style="background:linear-gradient(to right,lightgreen,lightgray)">
+    <h3>Enterprise Plan</h3>
+    <div>$99<span>/mo</span></div>
+    <ul>
+      <li>&#10003; Unlimited Users</li>
+      <li>&#10003; All Features</li>
+      <li>&#10003; 24/7 Support</li>
+      <li>&#10003; Customization</li>
+    </ul>
+  </div>
+  </div>
+  <br><hr><br>
+  <h1>Mini Project 6-Flexbox Navigation Bar</h1>
+  <nav class="navbar1">
+ <div>
+ <img src="beauty.jpg">
+ </div>
+ <div>
+<ul class="navbar1-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></div>
+</nav>
+<br><hr><br>
+<h1>Mini Project 7- Login & Sign up Form side by side</h1>
+<div class="form-container">
+        <div class="form-section login-section">
+            <h2>Login</h2>
+            <form>
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="login-email" required autocomplete="username">
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="login-password" required autocomplete="current-password">
+                </div>
+                <button class="mybutton" type="submit">Log In</button>
+            </form>
+        </div>
+        <div class="form-section signup-section">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="input-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" name="signup-username" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="signup-email" required autocomplete="username">
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="signup-password" required autocomplete="new-password">
+                </div>
+                <button class="mybutton"type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <br><hr><br>
+<h1>Mini Project 8 - Flexbox Contact Section</h1>
+<section>
+        <div class="contact-container">
+    <form class="contact-form">
+    <h1 style="text-align: center;">Contact Us</h1>
+      <p>Fields marked with * are required.</p>
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email">
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+      <button type="submit">Send Message</button>
+    </form> 
+    <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.931753371669!2d77.41818127478001!3d8.978427591080944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b069d57c30ef193%3A0xc3b0b2047ab1c486!2sVetri%20Computer%20Centre%2C%20Surandai!5e0!3m2!1sen!2sin!4v1764785502100!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div>
+</section>
+<br><hr><br>
+</body>
+</html>

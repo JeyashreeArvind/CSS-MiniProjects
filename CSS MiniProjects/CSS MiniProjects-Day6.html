@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS MiniProjects-Day6</title>
+</head>
+<style>
+.card {
+    width: 20%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    font-size:14px;
+    margin-bottom: 15px;
+}
+.header1{
+    display: flex;
+    background-color: orangered;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin-bottom: 0;
+    flex-direction: column;
+}
+.features-container{
+    background-color: lightgray;
+    display: flex;
+    margin-top: 0;
+}
+.features{
+    display:flex;
+    width: 98%;
+    border-radius: 5px;
+    padding:20px;
+    margin:20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+}
+.footer1{
+    display: flex;
+    background-color: black;
+    color:white;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.container1{
+    width:100%;
+    background-color: lightgray;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  align-items: center;
+  justify-content: center;
+}
+
+.card1{
+  border: 2px solid #ccc;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px gray;
+  margin-top: 20px;
+  width:1000px;
+}
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  padding: 20px;
+  margin:10px;
+  width:95%;
+  background-color: lightgray;
+}
+.service-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  background-image: linear-gradient(to right,pink,violet);
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px gray;
+}
+.service-item:hover{
+transform: scale(1.05);
+}
+.service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #007BFF;
+        }
+.service-item h3 {
+  margin-top: 0;
+  color: #333;
+}
+.ser-container{
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+.grid-container{
+    background-color: rgb(142, 198, 225);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    gap:50px;
+    margin: 20px;
+}
+.header2{
+    background-image: linear-gradient(to right,rgb(84, 225, 77),rgb(137, 206, 147));
+    text-align: center;
+}
+.footer2{
+    text-shadow: #333;
+    color: white;
+    background-color: black;
+    text-align: center;
+    height:40px;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: lightpink;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    padding:10px;
+}
+.column-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:500px;
+    width:80%;
+    border:3px solid gray;
+    margin-top: 0;
+    margin-left: 200px;
+    background-color: lightgray;
+}
+.content{
+    border:3px solid black;
+    height:440px;
+    margin:0;
+    line-height: 1.5;
+    padding:30px;
+}
+.image{
+    border:3px solid black;
+}
+.header-about{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(lightpink,lightgreen);
+    margin-bottom: 0;
+}
+ .comparison-table {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     }
+        .feature-row th,td{
+            text-align: center;
+            background-color: #d1aac7;
+            padding: 10px;
+            margin-top:5px;
+            margin-bottom: 5px;
+        }
+       .best-product{
+        background-color: lightgreen;
+            margin:5px;
+        }
+        
+        
+
+</style>
+<body>
+<h1>Mini Project 1: Simple Card Layout</h1>
+<div class="card">
+    <img src="brownie.jpg" alt="Product Image">
+    <h2>Brownie</h2>
+    <p class="price">$29.99</p>
+    <p class="desc">"A brownie a day keeps the frownies away!"</p>
+    <button>Add to Cart</button>
+</div> 
+<br><hr><br> 
+<h1>Landing Page Section</h1>
+<header>
+<div class="header1">
+<h1>Welcome to Our Landing Page</h1>
+<p style="color: black;">Discover amazing features and services</p>
+</div>
+</header>
+<section class="features-container">
+<div class="features">
+<div>
+<img src="vetriitcircle.jpg">
+</div>
+<h1>Why Choose Us?</h1>
+<p>We provide high quality services to help you grow your business.</p>
+</div>
+</section>
+<footer class="footer1">
+<p>&copy 2025 Vetri Technology Solutions. All Rights Reserved.</p>
+</footer>
+<br><hr><br>
+<h1>Mini Project 3:Blog Post Layout</h1>
+<div class="container1">
+<header style="background-image: linear-gradient(to right,coral, rgb(238, 175, 117) );color:white;padding:20px;text-align: center;">
+<h1>My Blog</h1>
+<p>Sharing Thoughts and views</p>
+</header>
+<div class="card-container">
+<div class="card1">
+<h1>Blog Post 1</h1>
+<p>Technology is evolving at an unprecedented pace, shaping the way we live, work and interact with the
+world.To the AI advancements to the Internet of Things, innovation is driving the future.</p>
+</div>
+<div class="card1">
+<h1>Blog Post 2</h1>
+<p>Technology is changing the world by transforming daily life, work, and society through increased connectivity, automation, and access to information.</p>
+</div>
+</div>
+<footer style="background-color: black; color: white;height:50px;text-align: center;">
+<p>&copy 2025 My Blog. All Rights Reserved.</p>
+</footer></div>
+<br><hr><br>
+<h1>Mini Project 4-Service Page</h1>
+<header class="header2">
+    <h1>Our Services</h1>
+</header>
+<div class="ser-container">
+    <h1>What We Offer</h1>
+<div class="services-container">
+  <div class="service-item">
+    <div class="service-icon"><img src="webdevelopment.jpg"></div>
+     <h3>Web Development</h3>
+            <p>We build modern and responsive websites tailored to your needs.</p>
+  </div>
+  <div class="service-item">
+    <div class="service-icon"><img src="graphic.jpg"></div>
+    <h3>Graphic Design</h3>
+            <p>Our Design team creates stunning graphics to bring your vision to live.</p>
+  </div>
+  <div class="service-item">
+    <div class="service-icon"><img src="seoopt.jpg"></div>
+    <h3>SEO Optimization</h3>
+            <p>Boost your online presence with our expert SEO Optimization services.</p>
+  </div>
+   </div>
+   </div>
+   <footer class="footer2">
+<p>&copy 2025 Vetri Technology Solutions. All Rights Reserved.</p>
+</footer></div>
+<br><hr><br>
+<h1>Mini Project 5: Testimonial Section</h1>
+<section>
+    <h2>What Our Customers Say</h2>
+    <div class="cards-container">
+            <article class="service-card">
+             <figure><img src="jagdish.jpg" alt="Jagdish">
+        <blockquote>
+            <p>"The service was exceptional from start to finish. The team went above and beyond to ensure all my needs were met. I highly recommend them!"</p>
+        </blockquote>
+        <figcaption>
+            <strong>— Jagdish</strong>
+            <cite>CEO, TechCorp Solutions</cite>
+        </figcaption></figure>   
+            </article>
+            <article class="service-card">
+             <figure>
+        <img src="geetha.jpg" alt="Geetha">
+        <blockquote>
+            <p>"A truly game-changing product. It has streamlined our operations and improved efficiency dramatically. We couldn't be happier with the results."</p>
+        </blockquote>
+        <figcaption>
+            <strong>— Geetha</strong>
+            <cite>CTO, Innovate Ltd.</cite>
+        </figcaption></figure>   
+            </article>
+            <article class="service-card">
+           <figure class="testimonial-block">
+        <img src="saraswathi.jpg" alt="Saraswathi">
+        <blockquote>
+            <p>"Professional, responsive, and a pleasure to work with. They delivered a high-quality solution ahead of schedule and within budget."</p>
+        </blockquote>
+        <figcaption>
+            <strong>— Saraswathi</strong>
+            <cite>Founder, Creative Minds</cite>
+        </figcaption>
+    </figure></article>     
+        </div> 
+        <footer style="font-size: larger;background-color: antiquewhite;">
+        <p>Read more success stories in our case studies section.</p>
+    </footer>
+<br><hr><br>
+<h1>Mini Projects 6-Team members Grid</h1>
+<div class="grid-container">
+  <div class="service-item">
+    <div class="service-icon"><img src="geetha.jpg" alt="Geetha"></div>
+     <h1>Geetha</h1>
+            <p>WebDeveloper</p>
+  </div>
+  <div class="service-item">
+    <div class="service-icon"><img src="jagdish.jpg" alt="Jagdish"></div>
+    <h1>Jagdish</h1>
+            <p>Graphic Designer</p>
+  </div>
+  <div class="service-item">
+    <div class="service-icon"><img src="saraswathi.jpg" alt="Saraswathi"></div>
+    <h1>Saraswathi</h1>
+            <p>HR Manager</p>
+   </div>
+   </div>
+<br><hr><br>
+<h1>Mini Project:7 - About Us Section</h1>
+<header class="header-about">
+<h1>Shree's Boutique</h1>
+</header>
+<div class="column-container">
+ <div class="image"><img src="saree.jpg" width="375px"></div>
+ <div class="content"><h1>Welcome to Shree's Boutique!</h1>
+<p>Our journey began in 2016 with our first stall in Chennai, India. 
+    After the success of this humble beginning, Thanvi Boutique launched its boutique shop in 2018
+     and has never looked back. Today, with three branches across Tamil Nadu—in Chennai, Madurai, 
+     and Karaikudi—we have become the world’s preferred choice for handloom sarees, setting new standards 
+     of customer delight every day. Today we have our own handlooms and a tailoring section to curate the needs
+      of our customers.</p>
+<h2>Our Mission</h2>
+<p>At Shree's Boutique, we are driven by a passion to empower individuals with timeless elegance while preserving 
+    the traditions woven into each fabric. By showcasing the skill and dedication of our talented artisans and weavers, 
+    we contribute to sustaining age-old crafts, supporting local communities, and fostering a sense of pride.</p>
+    </div>
+</div>
+<br><hr><br>
+<h1>Mini Project:8 - Feature Comparison Table</h1>
+<h1>Feature Comparison table</h1>
+<table class="comparison-table">
+        <thead class="feature-row">
+            <tr>
+                <th>Feature</th>
+                <th>Sony Xperia XZ1</th>
+                <th class="best-product">Vivo V5</th>
+                <th>Oppo F1s</th>
+            </tr>
+        </thead>
+  <tbody>
+    <tr>
+      <td>5G Connectivity</td>
+      <td>✅</td>
+      <td class="best-product">✅</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Expandable Storage</td>
+      <td>❌</td>
+      <td class="best-product">✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Headphone Jack</td>
+      <td>✅</td>
+      <td class="best-product">✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Good Camera</td>
+      <td>❌</td>
+      <td class="best-product">✅</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Processor Speed</td>
+      <td>❌</td>
+      <td class="best-product"> ✅</td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
