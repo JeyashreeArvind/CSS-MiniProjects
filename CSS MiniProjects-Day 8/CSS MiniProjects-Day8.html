@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS MiniProjects- Day 8</title>
+<style>
+.card {
+    width: 20%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    font-size:14px;
+    margin-bottom: 15px;
+}
+.services-container{
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    height: 400px;
+    gap:50px;
+}
+.ser-container {
+  display: flex;
+  gap: 20px; 
+  padding: 20px;
+  margin:10px;
+  width:95%;
+  background-color: lightgray;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.service-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  background-image: linear-gradient(to right,rgb(86, 189, 234),violet);
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px gray;
+  width:20%;
+  flex-grow: 1;
+}
+.service-items {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  background-image: linear-gradient(to right,rgb(243, 144, 179),violet);
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px gray;
+  width:20%;
+  flex-basis:auto;
+}
+.service1-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px gray;
+  width:20%;
+  flex-basis:auto;
+}
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  gap: 50px; 
+  padding: 20px;
+  flex-wrap: wrap; 
+  flex-direction: row;
+}
+.plan {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  flex: 1 1 300px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+.plan:hover{
+    transform: scale(1.2);
+}
+ .navbar {
+    background:linear-gradient(to right,lightgreen,rgb(242, 83, 62));
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    box-sizing: border-box;
+    gap:100px;
+}
+.navbar-links{
+    list-style-type: none; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    overflow:hidden;
+    letter-spacing: 2px;
+}
+.navbar a {
+    float: left; 
+    display: block; 
+    color: #f2f2f2; 
+    text-align: center; 
+    padding: 15px 20px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar-links li a:hover {
+    background-color: #555; 
+    color: #4CAF50;
+    border-radius: 4px; 
+}
+.contact-container {
+  display: flex;
+  gap: 40px;
+  width: 60%;
+  height:550px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.6), 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.contact-form{
+            display:flex;
+            flex-direction: column;
+            width:30%;
+            height:500px;
+            border: 2px solid black;
+            padding: 10px;
+            gap:20px;
+            background-color: rgb(161, 226, 181);
+        }
+        .newsletter-banner {
+    width:100vw;
+    background: linear-gradient(135deg, #4a90e2, #1dc655);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .newsletter-banner h2 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+     text-shadow: 2px 2px 4px rgba(110, 155, 13, 0.5);
+  }
+  .newsletter-banner p {
+    margin: 0 0 20px;
+    font-size: 2em;
+  }
+  .newsletter-form button {
+    padding: 12px 20px;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #357abd;
+    font-size: 2vmin;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .newsletter-form input[type="email"] {
+    padding: 12px 16px;
+    width: 260px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+</style>
+</head>
+<body>
+<h1>Mini Project 1: Card Layout</h1>
+<div class="card">
+    <img src="brownie.jpg" alt="Product Image">
+    <h2>Brownie</h2>
+    <p class="price">$29.99</p>
+    <p class="desc">"A brownie a day keeps the frownies away!"</p>
+    <button>Add to Cart</button>
+</div> 
+<br><hr><br>
+<h1>Mini Project 2-Feature Section</h1>
+<div class="ser-container">
+    <h1 style="text-align: center;">Our Features</h1>
+<div class="services-container">
+  <div class="service-item">
+    <div class="service-icon"><img src="fast.jpg"></div>
+     <h3>Fast Performance</h3>
+            <p>Experience lightning-fast load times.</p>
+  </div>
+  <div class="service-item" style="flex-grow: 2;">
+    <div class="service-icon"><img src="secure.jpg"></div>
+    <h3>Secure Platform</h3>
+            <p>Enhanced security to secure your data.</p>
+  </div>
+  <div class="service-item">
+    <div class="service-icon"><img src="easy.png" ></div>
+    <h3>Easy Integration</h3>
+            <p>Seamless integration with your tools.</p>
+  </div>
+   </div>
+   </div>
+   <br> 
+<h1>Mini Project-3 Responsive card layout</h1> 
+<div class="ser-container">
+    <h1>Brownies and cookies</h1>
+<div class="services-container">
+  <div class="service-items">
+    <div class="service-icon"><img src="brownie.jpg"></div>
+     <h3>Fudgy Brownies</h3>
+            <button>Buy Now</button>
+  </div>
+  <div class="service-items">
+    <div class="service-icon"><img src="cookie.jpg"></div>
+    <h3>Crispy and Yummy Cookies</h3>
+            <button>Buy Now</button>
+  </div>
+  <div class="service-items">
+    <div class="service-icon"><img src="plumcake.jpg"></div>
+    <h3>Tasty and eggless plum cake</h3>
+            <button>Buy Now</button>
+  </div>
+   </div>
+   </div>
+<br><hr><br>
+<h1>Mini Project 4 -Responsive product</h1>
+<div class="ser-container">
+    <h1 style="text-align: center;">Our Products</h1>
+<div class="services-container">
+  <div class="service1-item">
+    <div class="service-icon"><img src="headphones.jpg"></div>
+     <h3>Featured Headphones</h3>
+            <p>High-Quality sound with noise-cancellation.</p>
+             <h3 style="color: orange;">Rs.199</h3>
+        </div>
+  <div class="service1-item">
+    <div class="service-icon"><img src="earbud.jpg" width="170px"></div>
+    <h3>Wireless Airbuds</h3>
+    <p>Compact and powerful sound.</p>
+    <h3 style="color: orange;">Rs.799</h3>
+  </div>
+  <div class="service1-item">
+    <div class="service-icon"><img src="smartwatch.jpg" width="120px"  ></div>
+    <h3>Smart Watch</h3>
+            <p>Track Fitness and notification</p>
+            <h3 style="color: orange;">Rs.1999</h3>
+  </div>
+   </div>
+   </div>
+   <br><hr><br>
+   <h1>Mini Project: 5 - Flexbox Pricing Table</h1>
+<div class="pricing-table">
+  <div class="plan">
+    <h3>Basic Plan</h3>
+    <div>$19<span>/mo</span></div>
+    <ul>
+      <li>&#10003; 5 Users</li>
+      <li>&#10003; Basic Features</li>
+      <li>&#10005; 24/7 Support</li>
+      <li>&#10005; Customization</li>
+    </ul>
+  </div>
+  <div class="plan"  style="background:linear-gradient(to right,lightgreen,lightgray); flex-grow: 2;">
+    <h3>Pro Plan</h3>
+    <div>$49<span>/mo</span></div>
+    <ul>
+      <li>&#10003; 20 Users</li>
+      <li>&#10003; All Features</li>
+      <li>&#10003; 24/7 Support</li>
+      <li>&#10005; Customization</li>
+    </ul>
+  </div>
+  <div class="plan">
+    <h3>Premium Plan</h3>
+    <div>$99<span>/mo</span></div>
+    <ul>
+      <li>&#10003; Unlimited Users</li>
+      <li>&#10003; All Features</li>
+      <li>&#10003; 24/7 Support</li>
+      <li>&#10003; Customization</li>
+    </ul>
+  </div>
+  </div>
+  <br><hr><br>
+ <h1>Mini Project 6-Flexbox Navigation Bar</h1>
+ <nav class="navbar">
+ <img src="shree.jpg">
+<ul class="navbar-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button type="submit" style="width:200px;height:50px;color:white;background-color:  blue;">Login</button>
+</nav>
+<br><hr><br>
+<h1>Mini Project 7-Flexbox Contact section</h1>
+<div class="contact-container">
+    <form class="contact-form">
+    <h1 style="text-align: center;">Contact Us</h1>
+      <p>Fields marked with * are required.</p>
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email">
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+      <button type="submit">Send Message</button>
+    </form> 
+    <div class="contac">
+      <h1>Contact Address</h1>
+      <h2>Address:</h2>
+      <p>10,abc colony,chennai.</p>
+      <h2>Mobile: 1234567890</h2>
+    </div>
+    </div>
+    <br><hr><br>
+<h1>Mini Project 8: Newsletter Signup Banner</h1>
+<div class="newsletter-banner">
+  <h2>Join Our Newsletter</h2>
+  <p>Get updates, tips, and exclusive content delivered straight to your inbox.</p>
+
+  <form class="newsletter-form">
+    <input type="email" placeholder="Enter your email" required />
+    <button type="submit">Sign Up</button>
+  </form>
+</body>
+</html>
