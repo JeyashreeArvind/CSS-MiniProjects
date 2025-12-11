@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS MiniProjects - Day 10</title>
+<style>
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main-content sidebar";
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: lightgray;
+    height:500px;
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #fff;
+    margin-right: 30px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.article {
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+}
+
+.article:last-child {
+    border-bottom: none;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; 
+  padding: 20px;
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  display: flex; 
+  flex-direction: column;
+  height: 100%; 
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+.card-content h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.card-content p {
+  flex-grow: 1; 
+}
+
+.price {
+  font-weight: bold;
+  color: #e94d4d;
+  margin-bottom: 10px;
+}
+
+.card-content a {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: auto;
+}
+.image-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    flex-wrap:nowrap;
+}
+.gallery-item img {
+    width: 100%;  
+    height:300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.gallery-item:hover img{
+  filter: brightness(1.5);
+}
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Sidebar width and main content */
+    grid-template-rows: auto 1fr auto; /* Header height, main content height, footer height */
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    height: 100vh;
+}
+
+.header1 {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.sidebar1 {
+    grid-area: sidebar;
+    background-color: #444;
+    color: white;
+    padding: 10px;
+}
+
+.main-content1 {
+    grid-area: main;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.footer1{
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.main-content1 {
+    grid-area: main;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex; /* Nested Flexbox */
+    gap: 20px;
+}
+
+.card1{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1; 
+    text-align: center;
+    height:100px;
+}
+.admin-container {
+    display: grid;
+    min-height: 100vh; 
+    grid-template-columns: 250px 1fr; 
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "nav nav"
+        "sidebar2 content"
+        "footer2 footer2";
+    gap: 10px; 
+    padding: 10px;
+}
+
+
+.nav-area { grid-area: nav; background: #333; color: white; padding: 20px; }
+.sidebar2{ grid-area: sidebar2; background: #444; color: white; padding: 20px; }
+.content { grid-area: content; background: #fff; padding: 20px; }
+.footer2 { grid-area: footer2; background: #333; color: white; padding: 15px; text-align: center; }
+
+.widget-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+.widget {
+    background-color: #eef;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+    .admin-container {
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+            "nav"
+            "sidebar2"
+            "content"
+            "footer2";
+    }
+  .sidebar2 {
+        display: none;
+  }
+}
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; 
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px); /* Lifts the card slightly */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+    }
+
+.course-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.course-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+.progress-container {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: auto; /* Pushes the progress bar to the bottom of the card content */
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #28a745; /* Green color for progress */
+    text-align: center;
+    color: white;
+    font-size: 0.75rem;
+    transition: width 0.4s ease-in-out;
+}
+.progress-label {
+    padding: 0 5px;
+    white-space: nowrap;
+}
+.listings-grid {
+  display: grid;
+  /* Responsive columns: as many as fit with a min width of 250px */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Consistent row height: each automatically created row will be 200px tall */
+  grid-auto-rows: 200px;
+  /* Gap between grid items */
+  gap: 20px;
+  padding: 20px;
+}
+
+.listing-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 100%; /* Ensures card fills its grid area */
+}
+
+/* Feature 1: Make a specific card span 2 rows */
+.large-listing {
+  grid-row: span 2; 
+}
+
+.listing-img {
+  width: 100%;
+  height: 40%; 
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.listing-info {
+  padding: 15px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.listing-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.listing-description {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .listings-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .large-listing {
+    grid-row: span 1; 
+  }
+}
+.faq-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Desktop Layout: Two columns using grid */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px; /* Space between the two columns */
+        }
+
+        /* Mobile Layout: Stack vertically */
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr; /* Single column on mobile */
+            }
+        }
+        .faq-item {
+            border: 1px solid #ddd;
+            margin-bottom: 15px; /* Space between individual items within a column */
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: #f9f9f9;
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f1f1f1;
+        }
+        .toggle-icon {
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+
+        /* Rotates the icon when the answer is shown */
+        .faq-question.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 15px;
+            background-color: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+
+        .faq-answer p {
+            padding: 15px 0; /* Add back vertical padding when visible */
+            margin: 0;
+              }
+
+        /* Class added by JS when active */
+        .faq-answer.active {
+            max-height: 500px; /* Arbitrary large value to allow smooth transition */
+            padding: 0 15px 15px 15px;
+        }
+</style>
+</head>
+<body>
+<h1>Mini Project 1 : Blog Layout</h1>
+<div class="container">
+    <header class="header">
+        <h1>My Blog</h1>
+    </header>
+    <main class="main-content">
+        <article>
+            <h2>Article 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+        </article>
+        <article>
+            <h2>Article 2</h2>
+            <p>Quasque ac justo et eros scelerisque laoreet. Fusce non neque id purus</p>
+        </article>
+        <article>
+            <h2>Article 3</h2>
+            <p>Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus</p>
+        </article>
+    </main>
+    <aside class="sidebar">
+        <h2>Sidebar</h2>
+        <p>Related content, categories, or advertisements can go here.</p>
+    </aside>
+</div>
+<br><hr><br>
+<h1>Mini Project 2 : Product Showcase </h1>
+<div class="product-grid">
+  <div class="product-card">
+    <img src="VivoY31.jpg" alt="Product 1" />
+    <div class="card-content">
+      <h3>Vivo Y31</h3>
+      <p>5G 6GB RAM, 128GB (Y315G6128GB)</p>
+      <div class="price">$29.99</div>
+      <a href="#">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="y400.jpg" alt="Product 2" />
+    <div class="card-content">
+      <h3>Vivo Y400 Mobile </h3>
+      <p>5G 8GB RAM, 128GB (Y4005G8128GB).</p>
+      <div class="price">$39.99</div>
+      <a href="#">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="y19.jpg" alt="Product 3" />
+    <div class="card-content">
+      <h3>Vivo Y19s</h3>
+      <p> 5G 6GB RAM 128GB (Y19S5G6128GB)</p>
+      <div class="price">$49.99</div>
+      <a href="#">Add to Cart</a>
+    </div>
+  </div>
+    <div class="product-card">
+    <img src="v60e.jpg" alt="Product 4" />
+    <div class="card-content">
+      <h3>Vivo V60e 5G</h3>
+      <p>8GB RAM, 256GB Storage, V60E5G8256GB</p>
+      <div class="price">$59.99</div>
+      <a href="#">Add to Cart</a>
+    </div>
+  </div>
+</div>
+<h1>Responsive Photo Gallery</h1>
+<div class="image-container">
+        <div class="gallery-item" style="grid-column: span 2;">
+         <figure><figcaption style="font-size: 2rem;text-align:center;font-weight: bold;">Rose</figcaption><img src="rose.jpg" alt="Flower: Rose"></figure> 
+        </div>
+        <div class="gallery-item">
+          <figure><figcaption style="font-size: 2rem;text-align: center;font-weight: bold;">Blue Flower</figcaption> <img src="blue.jpg" alt="Flower: Blue"></figure>
+        </div>
+        <div class="gallery-item">
+           <figure><figcaption style="font-size: 2rem;text-align: center;font-weight: bold;">White Flower</figcaption> <img src="white.jpg" alt="Flower: White"></figure>
+        </div>
+        <div class="gallery-item">
+            <figure><figcaption style="font-size: 2rem;text-align: center;font-weight: bold;">RedRose</figcaption> <img src="redrose.jpg" alt="Flower: RedRose"></figure>
+        </div>
+        <div class="gallery-item" >
+            <figure><figcaption style="font-size: 2rem;text-align: center;font-weight: bold;">Colourful Flower</figcaption><img src="colourful.jpg" alt="Flower: Colourful"></figure>
+        </div>
+        <div class="gallery-item">
+            <figure><figcaption style="font-size: 2rem;text-align: center;font-weight: bold;">Sunflower</figcaption><img src="sunflower.jpg" alt="Flower:Sunflower"></figure>
+        </div>
+        </div>
+        <br><br><hr>  
+<h1>Mini Project 4 : Dashboard Layout</h1>
+<div class="dashboard-container">
+        <header class="header1" style="text-align: center;">Dashboard</header>
+        <aside class="sidebar1">Home</aside>
+        <main class="main-content1">
+            <div class="card1">Card 1</div>
+            <div class="card1">Card 2</div>
+            <div class="card1">Card 3</div>
+        </main>
+        <footer class="footer1">Footer</footer>
+    </div>
+<br><hr><br>
+<h1>Mini Project 5 : Admin Panel Grid </h1>
+<div class="admin-container">
+    <header class="nav-area">Navigation Header</header>
+    <aside class="sidebar2">Sidebar Menu</aside>
+    <main class="content">
+        <div class="widget-grid">
+            <div class="widget widget-1">Widget 1</div>
+            <div class="widget widget-2">Widget 2</div>
+            <div class="widget widget-3">Widget 3</div>
+            <div class="widget widget-4">Widget 4</div>
+        </div>
+    </main>
+    <footer class="footer2">Admin Footer</footer>
+</div>
+<br><hr><br>
+<h1>Mini Project 6 : E-Learning Course Layout  </h1>
+ <div class="course-grid">
+        <div class="course-card">
+            <img src="htmlcss.jpg" alt="Course 1 Thumbnail" class="course-thumbnail">
+            <div class="course-info">
+                <h2 class="course-title">HTML & CSS Basics</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 75%;">
+                        <span class="progress-label">75% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="jsf.jpg" alt="Course 2 Thumbnail" class="course-thumbnail">
+            <div class="course-info">
+                <h2 class="course-title">JavaScript Fundamentals</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 25%;">
+                       <span class="progress-label">25% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="rds.jpg" alt="Course 3 Thumbnail" class="course-thumbnail">
+            <div class="course-info">
+                <h2 class="course-title">Responsive Design</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 50%;">
+                        <span class="progress-label">50% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="course-card">
+            <img src="cssgrid.png" alt="Course 4 Thumbnail" class="course-thumbnail">
+            <div class="course-info">
+                <h2 class="course-title">Advanced CSS Grid</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 10%;">
+                        <span class="progress-label">10% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><hr><br>
+    <h1> Mini Project 7 : Real Estate Listings Grid  </h1>
+    <div class="listing-card">
+    <img src="real1.jpg" alt="Property 1" class="listing-img">
+    <div class="listing-info">
+      <div class="listing-price">$500,000</div>
+      <p class="listing-description">A beautiful 3-bedroom, 2-bathroom house with a garden.</p>
+    </div>
+  </div>
+
+  <div class="listing-card large-listing">
+    <img src="real2.jpg" alt="Property 2" class="listing-img">
+    <div class="listing-info">
+      <div class="listing-price">$950,000</div>
+      <p class="listing-description">Luxury 5-bedroom villa with a pool and sea view. Spans two rows.</p>
+    </div>
+  </div>
+  
+
+  <div class="listing-card">
+    <img src="real3.jpg" alt="Property 3" class="listing-img">
+    <div class="listing-info">
+      <div class="listing-price">$320,000</div>
+      <p class="listing-description">Cozy 2-bedroom apartment in the city center.</p>
+    </div>
+  </div>
+
+  <div class="listing-card">
+    <img src="real4.jpg" alt="Property 4" class="listing-img">
+    <div class="listing-info">
+      <div class="listing-price">$450,000</div>
+      <p class="listing-description">Modern loft apartment with a balcony.</p>
+    </div>
+  </div>
+
+  <div class="listing-card">
+    <img src="real5.jpg" alt="Property 5" class="listing-img">
+    <div class="listing-info">
+      <div class="listing-price">$600,000</div>
+      <p class="listing-description">Spacious family home in a quiet neighborhood.</p>
+    </div>
+  </div>
+</div>
+<br><hr><br>
+<h1>Mini Project 8 : FAQ Section with Grid Layout  </h1>
+<div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-grid">
+            <!-- Column 1 FAQs -->
+            <div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        Question 1: What is the return policy?
+                        <span class="toggle-icon">&#9660;</span> <!-- Down arrow -->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our return policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately we can’t offer you a refund or exchange.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        Question 2: How do I track my order?
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can track your order using the tracking number sent to your email confirmation. Please visit our [Order Tracking](https://example.com/track) page for more details.</p>
+                    </div>
+                </div>
+
+                 <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        Question 3: Do you ship internationally?
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we ship to over 50 countries worldwide. Shipping costs vary by location and weight. You can see the estimated costs during checkout.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        Question 4: Can I change my shipping address?
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You may change your shipping address within 24 hours of placing your order. Please contact our support team immediately.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        Question 5: What payment methods do you accept?
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept Visa, Mastercard, American Express, PayPal, and Apple Pay.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        Question 6: How do I apply a discount code?
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can enter your discount code on the checkout page in the designated field before finalizing your purchase.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script>
+        function toggleAnswer(questionElement) {
+            // Toggle 'active' class on the question header itself
+            questionElement.classList.toggle('active');
+
+            // Find the immediate sibling, which is the answer div
+            const answerElement = questionElement.nextElementSibling;
+            
+            // Toggle 'active' class on the answer
+            answerElement.classList.toggle('active');
+
+            // The CSS transition handles the max-height animation
+        }
+    </script>
+
+</body>
+</html>
